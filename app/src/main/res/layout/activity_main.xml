@@ -4,53 +4,160 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.aidldemoserver.MainActivity">
 
     <EditText
         android:id="@+id/editTextNumber1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginStart="4dp"
         android:ems="10"
         android:hint="Enter number1"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumber2" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber2"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextNumber2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="185dp"
-        android:layout_marginBottom="186dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Enter number2"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewAnswer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber1"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonConcateString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:text="Concate String"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCreateStudent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCreateStudent" />
 
     <Button
         android:id="@+id/buttonSubmitAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginBottom="8dp"
         android:text="Add"
-        app:layout_constraintBottom_toTopOf="@+id/textViewAnswer"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRandomNumber"
+        app:layout_constraintEnd_toEndOf="@+id/buttonRandomNumber" />
+
+    <Button
+        android:id="@+id/buttonRandomNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="Random Number"
+        app:layout_constraintBottom_toTopOf="@+id/buttonConcateString"
+        app:layout_constraintEnd_toEndOf="@+id/buttonConcateString" />
+
+    <Button
+        android:id="@+id/buttonSumOfArray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="13dp"
+        android:text="Sum Of Array"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBasicTypes"
+        app:layout_constraintStart_toEndOf="@+id/buttonRandomNumber" />
+
+    <Button
+        android:id="@+id/buttonBasicTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:text="Basic Types"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGetStudentDetails"
+        app:layout_constraintStart_toStartOf="@+id/buttonSumOfArray" />
+
+    <Button
+        android:id="@+id/buttonSubmitSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Sub"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSumOfArray"
+        app:layout_constraintStart_toStartOf="@+id/buttonSumOfArray" />
+
+    <Button
+        android:id="@+id/buttonCreateStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="13dp"
+        android:text="Create Student"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCreateStudentFromBundle"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCreateStudentFromBundle" />
+
+    <Button
+        android:id="@+id/buttonGetStudentDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="Get Student Details"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGetResult"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toEndOf="@+id/buttonCreateStudent" />
+
+    <Button
+        android:id="@+id/buttonGetResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="11dp"
+        android:text="Get Result"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSendStudents"
+        app:layout_constraintStart_toStartOf="@+id/buttonSendStudents" />
+
+
+    <Button
+        android:id="@+id/buttonCreateStudentFromBundle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="292dp"
+        android:text="Create Student From Bundle"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSendStudents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:text="Send Students"
+        app:layout_constraintStart_toEndOf="@+id/buttonSendStudentEnum"
+        app:layout_constraintTop_toTopOf="@+id/buttonSendStudentEnum" />
+
+    <Button
+        android:id="@+id/buttonSendStudentEnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="11dp"
+        android:text="Send Student Enum"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
-        app:layout_constraintVertical_bias="0.147" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonCreateStudentFromBundle" />
 
     <TextView
         android:id="@+id/textViewAnswer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="241dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="25dp"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSendStudentEnum" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
